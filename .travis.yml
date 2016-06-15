@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- '0.12'
+- '4'
+- stable
+before_script:
+- which uglifyjs || npm install -g uglify-js
+script:
+- npm run-script test

@@ -1,0 +1,25 @@
+{
+  "name": "request-country",
+  "version": "0.0.2",
+  "description": "Get country code from http request in nodejs",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapics/request-country.git"
+  },
+  "author": "sapics",
+  "bugs": {
+    "url": "https://github.com/sapics/request-country/issues"
+  },
+  "homepage": "https://github.com/sapics/request-country",
+  "keywords": [
+    "geoip"
+  ],
+  "dependencies": {
+    "geoip-country": "^3.1.9",
+    "request-ip": "^1.2.2"
+  }
+}
