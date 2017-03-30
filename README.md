@@ -25,8 +25,8 @@ var server = http.createServer(function(req, res) {
 ```javascript
 var requestCountry = require('request-country');
 app.use(requestCountry.middleware({
-  attributeName: 'requestCountryCode'
-  // default attributeName is 'requestCountryCode'
+  attributeName: 'requestCountryCode', // default is 'requestCountryCode'
+  privateIpCountry: 'US'
 }));
 
 app.use(function(req, res) {
