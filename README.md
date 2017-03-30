@@ -20,13 +20,19 @@ var server = http.createServer(function(req, res) {
 });
 ```
 
+If you want to set default value for [private network](https://en.wikipedia.org/wiki/Private_network) IPs, you can pass second argument. So if you open your site from private network or localhost it will be returned.
+
+```javascript
+  requestCountry(req, 'US');
+```
+
 ### As Connect Middleware
 
 ```javascript
 var requestCountry = require('request-country');
 app.use(requestCountry.middleware({
   attributeName: 'requestCountryCode', // default is 'requestCountryCode'
-  privateIpCountry: 'US'
+  privateIpCountry: 'US' // Result for private network IPs
 }));
 
 app.use(function(req, res) {
