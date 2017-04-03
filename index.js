@@ -6,10 +6,10 @@ var privateIpReg = /^(?:192\.168\.[0-9]+\.[0-9]+|10\.[0-9]+\.[0-9]+\.[0-9]+|172\
 
 function requestCountry(req, privateIpCountry) {
 	var ip = getClientIp(req), geo = getGeo(ip);
-	return (geo && geo.country) || (privateIpCountry && privateIpReg.test(ip) && privateIpCountry);
+	return geo ? geo.country : (privateIpCountry && privateIpReg.test(ip) && privateIpCountry);
 }
 
-requestCountry.middleware = function(options){
+requestCountry.middleware = function(options) {
 	var attr = options && options.attributeName || 'requestCountryCode';
 	var privateIpCountry = options && options.privateIpCountry || false;
 	return function(req, res, next) {
