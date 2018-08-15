@@ -5,7 +5,7 @@ var getGeo = require('geoip-country').lookup;
 var privateIpReg = /^(?:192\.168\.[0-9]+\.[0-9]+|10\.[0-9]+\.[0-9]+\.[0-9]+|172\.(1[6-9]|2[0-9]|3[0-2])\.[0-9]+\.[0-9]+|127\.0\.0\.1)$/;
 
 function requestCountry(req, privateIpCountry) {
-	var ip = getClientIp(req), geo = getGeo(ip);
+	var ip = typeof req === 'string' ? req : getClientIp(req), geo = getGeo(ip);
 	return geo ? geo.country : (privateIpCountry && privateIpReg.test(ip) && privateIpCountry);
 }
 
