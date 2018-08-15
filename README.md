@@ -26,6 +26,9 @@ If you want to set default value for [private network](https://en.wikipedia.org/
   requestCountry(req, 'US');
 ```
 
+You can get country code from ip address string as `requestCountry('2.2.2.2')`.
+
+
 ### As Connect Middleware
 
 ```javascript
