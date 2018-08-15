@@ -1,10 +1,12 @@
 {
   "name": "request-country",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get country code from http request in nodejs",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
