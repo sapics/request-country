@@ -5,7 +5,5 @@ node_js:
 - '6'
 - '8'
 - stable
-before_script:
-- which uglifyjs || npm install -g uglify-js
 script:
 - npm run-script test
