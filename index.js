@@ -6,7 +6,7 @@ var privateIpReg = /^(?:192\.168\.[0-9]+\.[0-9]+|10\.[0-9]+\.[0-9]+\.[0-9]+|172\
 
 function requestCountry(req, privateIpCountry) {
 	var ip = typeof req === 'string' ? req : getClientIp(req), geo = getGeo(ip);
-	return geo ? geo.country : (privateIpCountry && privateIpReg.test(ip) && privateIpCountry);
+	return geo ? geo.country : (privateIpCountry ? privateIpReg.test(ip) && privateIpCountry : false);
 }
 
 requestCountry.middleware = function(options) {
