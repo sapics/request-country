@@ -1,6 +1,6 @@
 {
   "name": "request-country",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Get country code from http request in nodejs",
   "main": "index.js",
   "types": "index.d.ts",
