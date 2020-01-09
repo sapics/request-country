@@ -46,4 +46,5 @@ app.use(function(req, res) {
 ## LICENSE
 
 This library use the [geoip-country](https://github.com/sapics/node-geoip-country) for getting country code.
-Thus, the license of this library is based on that. See the [LICENSE](https://github.com/bluesmoon/node-geoip/blob/master/LICENSE) file for details.
+[geoip-country](https://github.com/sapics/node-geoip-country) includes GeoLite2 ipv4 and ipv6 country data which created by MaxMind, available from https://www.maxmind.com.
+Thus, the license of this library is based on the GeoLite2 License. See the [LICENSE](https://github.com/bluesmoon/node-geoip/blob/master/LICENSE) file for details.
