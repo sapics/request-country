@@ -3,7 +3,7 @@ import * as express from 'express';
 interface MiddlewareOptions {
 	attributeName: string,
 	privateIpCountry: string
-};
+}
 
 declare function middleware(options: MiddlewareOptions) : express.RequestHandler;
 
