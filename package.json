@@ -1,6 +1,6 @@
 {
   "name": "request-country",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Get country code from http request in nodejs",
   "main": "index.js",
   "types": "index.d.ts",
@@ -24,11 +24,11 @@
     "geoip"
   ],
   "dependencies": {
-    "geoip-country": "^3.1.10",
+    "geoip-country": "^4.0.111",
     "request-ip": "^2.1.1"
   },
   "devDependencies": {
-    "@types/express": "^4.16.0",
+    "@types/express": "^4.17.13",
     "nodeunit": "^0.10.2"
   }
 }
